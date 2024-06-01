@@ -1,12 +1,14 @@
 {
     "compilerOptions": {
-        "lib": ["es2020", "dom"],
-        "outDir": "./dist",       // Directory for output files
-        "noImplicitAny": true,    // Raise error on expressions and declarations with an implied 'any' type
-        "module": "ES2020",          // Specify module code generation
-        "target": "ES2020",          // Set the JavaScript language version for emitted JavaScript and include compatible library declarations
-        "strict": true,           // Enable all strict type-checking options
-        "esModuleInterop": true   // Enables emit interoperability between CommonJS and ES Modules
+      "lib": ["es2020", "dom"],
+      "outDir": "./dist",
+      "noImplicitAny": true,
+      "module": "commonjs",    // Use CommonJS for compatibility with Node.js
+      "target": "ES2020",
+      "strict": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true
     },
-    "include": ["src/**/*"]       // Specify files included in the compilation
-}
+    "include": ["src/**/*"]
+  }
+  

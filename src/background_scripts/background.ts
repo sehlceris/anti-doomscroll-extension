@@ -1,4 +1,4 @@
-function extractDomain(url: string | undefined): string {
+const extractDomain = (url: string | undefined): string => {
   if (!url) {
     return "";
   }
@@ -9,7 +9,7 @@ function extractDomain(url: string | undefined): string {
     console.error("Invalid URL:", url);
     return "";
   }
-}
+};
 
 // src/background_scripts/background.ts
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
@@ -39,12 +39,12 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
           }
         });
       } else {
-        console.log(
-          `visiting url not on the restricted list`,
-          changeInfo?.url,
-          restrictedDomains,
-          domain
-        );
+        // console.log(
+        //   `visiting url not on the restricted list`,
+        //   changeInfo?.url,
+        //   restrictedDomains,
+        //   domain
+        // );
       }
     });
   }

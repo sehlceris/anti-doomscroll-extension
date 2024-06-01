@@ -1,3 +1,16 @@
+const extractDomain = (url: string | undefined): string => {
+  if (!url) {
+    return "";
+  }
+  try {
+    const { hostname } = new URL(url);
+    return hostname.replace(/^www\./, ""); // Remove 'www.' if it exists
+  } catch (e) {
+    console.error("Invalid URL:", url);
+    return "";
+  }
+};
+
 document.getElementById("proceed-btn")?.addEventListener("click", () => {
   const timeInputEle = document.getElementById(
     "time-input"
