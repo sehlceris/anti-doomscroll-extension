@@ -4,7 +4,7 @@
   "description": "WebExtension to help users avoid doomscrolling.",
   "main": "dist/background.js",
   "scripts": {
-    "export": "npm run build && npm run zip",
+    "export": "npm run build; npm run zip",
     "build": "tsc",
     "watch": "tsc --watch",
     "zip": "node scripts/zip.js",
