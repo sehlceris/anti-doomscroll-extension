@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Anti-Doomscroll WebExtension",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "This extension warns you when you visit websites you've marked as time-wasters.",
   "default_locale": "en",
   "permissions": [
