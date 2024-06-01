@@ -1,5 +1,8 @@
-document.getElementById("proceed-btn").addEventListener("click", () => {
-  const timeInput = document.getElementById("time-input")?.value;
+document.getElementById("proceed-btn")?.addEventListener("click", () => {
+  const timeInputEle = document.getElementById(
+    "time-input"
+  ) as HTMLInputElement;
+  const timeInput = timeInputEle?.value;
   let timeInMinutes = parseInt(timeInput, 10);
 
   if (isNaN(timeInMinutes) || timeInMinutes <= 0) {
@@ -25,13 +28,3 @@ document.getElementById("proceed-btn").addEventListener("click", () => {
     }
   });
 });
-
-function extractDomain(url) {
-  try {
-    const { hostname } = new URL(url);
-    return hostname.replace(/^www\./, ""); // Remove 'www.' if it exists
-  } catch (e) {
-    console.error("Invalid URL:", url);
-    return "";
-  }
-}

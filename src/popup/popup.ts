@@ -68,7 +68,7 @@ async function removeSite(index: number) {
   }
 }
 
-document.getElementById("add-site").addEventListener("click", async () => {
+document.getElementById("add-site")?.addEventListener("click", async () => {
   const newSiteInput = document.getElementById("new-site") as HTMLInputElement;
   const newSite = newSiteInput.value.trim().toLowerCase();
   console.log("new site to add:", newSite);
