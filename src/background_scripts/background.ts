@@ -25,12 +25,18 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
             domain.endsWith(restrictedDomain)
         )
       ) {
-        console.log(`visiting url on the restricted list`, changeInfo?.url);
-        // Store the original URL before redirecting
-        chrome.storage.local.set({ redirectUrl: changeInfo.url }, () => {
-          chrome.tabs.update(tabId, {
-            url: "src/warning_interface/warning.html",
-          });
+        chrome.storage.local.get({ [domain]: 0 }, (timestampData) => {
+          const lastAccepted = timestampData[domain];
+          const now = Date.now();
+
+          if (now > lastAccepted) {
+            // Check if current time is past the allowed time
+            chrome.storage.local.set({ redirectUrl: changeInfo.url }, () => {
+              chrome.tabs.update(tabId, {
+                url: "src/warning_interface/warning.html",
+              });
+            });
+          }
         });
       } else {
         console.log(

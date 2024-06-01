@@ -16,7 +16,7 @@ function setSites(sites: string[]): Promise<void> {
       if (chrome.runtime.lastError) {
         reject(chrome.runtime.lastError);
       } else {
-        resolve();
+        setTimeout(resolve, 50);
       }
     });
   });
@@ -60,7 +60,6 @@ async function removeSite(index: number) {
       sites.splice(index, 1);
       await setSites(sites);
       console.log("Site removed - updated sites:", sites);
-      displaySites(); // Refresh the list display
     } else {
       console.warn("Failed to retrieve sites for removal.");
     }
