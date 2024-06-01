@@ -1,0 +1,15 @@
+# Node modules
+node_modules/
+
+# Distribution directory
+dist/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Operating System generated files
+.DS_Store
+Thumbs.db
+
+# local files
+local/

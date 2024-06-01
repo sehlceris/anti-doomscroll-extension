@@ -1,0 +1,18 @@
+{
+  "name": "anti-doomscroll-webextension",
+  "version": "0.1.0",
+  "description": "WebExtension to help users avoid doomscrolling.",
+  "main": "dist/background.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/chrome": "^0.0.268",
+    "@types/firefox-webext-browser": "^120.0.3",
+    "typescript": "^5.4.5"
+  }
+}

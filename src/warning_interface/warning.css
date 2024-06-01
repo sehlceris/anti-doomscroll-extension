@@ -1,0 +1,13 @@
+/* src/warning_interface/warning.css */
+#warning-container {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+}

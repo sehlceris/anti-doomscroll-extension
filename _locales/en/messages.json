@@ -1,0 +1,8 @@
+{
+    "extensionName": {
+        "message": "Anti-Doomscroll WebExtension"
+    },
+    "extensionDescription": {
+        "message": "This extension warns you when you visit websites you've marked as time-wasters."
+    }
+}

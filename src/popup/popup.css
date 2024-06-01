@@ -1,0 +1,27 @@
+/* src/popup/popup.css */
+body {
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+input, button {
+    margin-top: 5px;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    margin-top: 5px;
+    background-color: #f4f4f4;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+li button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #ff0000;
+}
