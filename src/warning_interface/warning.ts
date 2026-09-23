@@ -24,8 +24,9 @@ document.getElementById("proceed-btn")?.addEventListener("click", () => {
 
   const timeInMilliseconds = timeInMinutes * 60 * 1000;
   console.log(
-    `proeced button clicked, dismissing warning for minuntes: `,
-    timeInMinutes
+    `proceed button clicked, dismissing warning for`,
+    timeInMinutes,
+    `minutes`
   );
 
   chrome.storage.local.get("redirectUrl", (data) => {
